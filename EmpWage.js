@@ -47,4 +47,16 @@ const MAX_HRS_IN_MONTH = 160;
     }
     let empWage = calculateDailyWage(totalEmpHrs);
     console.log("Total Days: " + totalWorkingDays +" " + "Total Hrs: " + totalEmpHrs +" " +"Emp Wage: " + empWage);
+    let totEmpWage = 0;
+    function sum(dailyWage)
+    {
+        totEmpWage += dailyWage;
+    }
+    empDailyWageArr.forEach(sum);
+    console.log("Total Days: " + totalWorkingDays+" " + "Total Hours: " + totalEmpHrs +" " +"Employee Wage: " + totEmpWage);
+
+    function totalWages(totalWage,dailyWage){
+        return totalWage + dailyWage;
+    }
+    console.log("Emp Wage With Reduce: "+empDailyWageArr.reduce(totalWages,0));
 }
