@@ -75,4 +75,9 @@ const MAX_HRS_IN_MONTH = 160;
     let fullDayWageArr = mapDayWithWageArr.filter(fulltimeWage);
     console.log("\nUC7-C - Daily Wage Filter When Fulltime Wage Earned");
     console.log(fullDayWageArr);
+    //UC7-D
+    function findFulltimeWage(dailyWage){
+        return dailyWage.includes("160");
+    }
+    console.log("\n UC 7D - First Time Fulltime Wage Was Earned On Day: "+ mapDayWithWageArr.find(findFulltimeWage));
 }
