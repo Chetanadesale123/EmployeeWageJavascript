@@ -80,4 +80,9 @@ const MAX_HRS_IN_MONTH = 160;
         return dailyWage.includes("160");
     }
     console.log("\n UC 7D - First Time Fulltime Wage Was Earned On Day: "+ mapDayWithWageArr.find(findFulltimeWage));
+    //UC-E
+    function isAllFulltimeWage(dailyWage){
+        return dailyWage.includes("160");
+    }
+    console.log("\nUC 7E - Check All Element Have Full Time Wage: "+fullDayWageArr.every(isAllFulltimeWage));
 }
