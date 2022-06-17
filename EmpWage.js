@@ -97,4 +97,8 @@ const MAX_HRS_IN_MONTH = 160;
         return numOfDays;
     }
     console.log("\nUC 7G - Number Of Days Employee Worked: "+empDailyWageArr.reduce(totalDaysWorked, 0));
+
+    //UC8   
+    let empDailyWageMap=0;
+    console.log("\nUC8 - Employee Wage Map TotalHrs: "+Array.from(empDailyWageMap.Values()).reduce(totalWages,0));
 }
