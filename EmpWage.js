@@ -42,7 +42,8 @@ const MAX_HRS_IN_MONTH = 160;
     {
         totalWorkingDays++;
         let empCheck = Math.floor(Math.random() * 10) % 3;
-        totalEmpHrs += getWorkingHours(empCheck);
+        let empHrs = getWorkingHours(empCheck);
+        totalEmpHrs += empHrs;
         empDailyWageArr.push(calculateDailyWage(empHrs));
     }
     let empWage = calculateDailyWage(totalEmpHrs);
@@ -59,4 +60,12 @@ const MAX_HRS_IN_MONTH = 160;
         return totalWage + dailyWage;
     }
     console.log("Emp Wage With Reduce: "+empDailyWageArr.reduce(totalWages,0));
+    let dailyCntr = 0;
+    function mapDayWithWage(dailyWage){
+        dailyCntr++;
+        return dailyCntr + " = " + dailyWage;
+    }
+    let mapDayWithWageArr = empDailyWageArr.map(mapDayWithWage);
+    console.log("\n UC7B - Daily Wage Map");
+    console.log(mapDayWithWageArr);
 }
