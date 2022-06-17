@@ -68,4 +68,11 @@ const MAX_HRS_IN_MONTH = 160;
     let mapDayWithWageArr = empDailyWageArr.map(mapDayWithWage);
     console.log("\n UC7B - Daily Wage Map");
     console.log(mapDayWithWageArr);
+    //Uc7-C
+    function fulltimeWage(dailyWage) {
+        return dailyWage.includes("160");
+    }
+    let fullDayWageArr = mapDayWithWageArr.filter(fulltimeWage);
+    console.log("\nUC7-C - Daily Wage Filter When Fulltime Wage Earned");
+    console.log(fullDayWageArr);
 }
